@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -15,8 +15,35 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <body>
+<style>
+.mailsends{
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  background-color: rgb(245, 58, 58);
+  color: white;
+  padding: 5px;
+  width: 100%;
+  border-radius: 7px;
+}
+.mailsendf{
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  background-color: green;
+  color: white;
+  padding: 5px;
+  width: 100%;
+  border-radius: 7px;
+}
+</style>
+
+</head>
+<body>
     <header class="header">
       <div class="header__content">
         <div class="header__logo-container">
@@ -211,46 +238,28 @@
           <span class="heading-sec__sub heading-sec__sub--lt">
             If you have any <strong>Query</strong>, Feel Free to contact <strong>ME</strong>.
           </span>
+          <?php if(isset($_GET['mailsend']) == "success") { ?>
+					  <div class="mailsends">Your Message Send</div>
+          <?php }elseif(isset($_GET['mailsend']) == "failed"){ ?>
+            <div class="mailsendf">Server Problem</div>
+         <?php } ?>
+
         </h2>
         <div class="contact__form-container">
           <form action="mail.php" method="POST" class="contact__form">
             <div class="contact__form-field">
               <label class="contact__form-label" for="name">Name</label>
-              <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
-              />
+              <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name"/>
             </div>
             <div class="contact__form-field">
               <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="text"
-                class="contact__form-input"
-                name="email"
-                id="email"
-              />
+              <input required placeholder="Enter Your Email" type="text" class="contact__form-input" name="email" id="email"/>
             </div>
             <div class="contact__form-field">
               <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
+              <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message"></textarea>
             </div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Submit
-            </button>
+            <button type="submit" class="btn btn--theme contact__btn"> Submit </button>
           </form>
         </div>
       </div>
