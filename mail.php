@@ -52,7 +52,7 @@ if(isset($_POST['name']) && isset($_POST['email'])){
     $query = "insert into contactme(name, email, message) values('$name','$email','$message')";
     $result = (mysqli_query($conn,$query) && sendMail($_POST['email'],$_POST['name'],$_POST['message'])) or die("Error Querying Database.....");
     if($result){
-        header("Location: index.php#contact?mailsend=success");
+        header("Location: index.php?mailsend=success#contact");
     }else{
         header("Location: index.php#contact?mailsend=failed");
     }

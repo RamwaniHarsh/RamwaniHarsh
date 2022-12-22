@@ -18,15 +18,17 @@
 <style>
 .mailsends{
   font-size: 20px;
+  align-items: center;
   text-align: center;
   text-decoration: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  background-color: rgb(245, 58, 58);
+  background-color: green;
   color: white;
   padding: 5px;
-  width: 100%;
   border-radius: 7px;
+  margin-left: 190px;
+  width: 850px;
 }
 .mailsendf{
   font-size: 20px;
@@ -34,7 +36,7 @@
   text-decoration: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  background-color: green;
+  background-color: rgb(245, 58, 58);
   color: white;
   padding: 5px;
   width: 100%;
@@ -326,27 +328,4 @@
 
     <script src="./index.js"></script>
   </body>
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyChxvIUUgvYhJS0oDtpTP_RlGs6a2F7LdE",
-      authDomain: "harsh-ramwani.firebaseapp.com",
-      projectId: "harsh-ramwani",
-      storageBucket: "harsh-ramwani.appspot.com",
-      messagingSenderId: "81862095146",
-      appId: "1:81862095146:web:561ff1c579cc9ca54dae53",
-      measurementId: "G-FQWF33M34T"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
 </html>
