@@ -33,7 +33,7 @@ function sendMail($email,$name,$message){
         $mail->Port       = 465;
         //Recipients
         $mail->setFrom('harshramwani.portfolio@gmail.com', 'Harsh Ramwani');
-        $mail->addAddress($email);     //Add a recipient
+        $mail->addAddress('harshramwani5@gmail.com');     //Add a recipient
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = "Alert";
